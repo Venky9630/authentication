@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: authentication-service
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/UsersDB?useSSL=false
+#    url: jdbc:mysql://database-1.cgjcovxp9ymj.us-east-1.rds.amazonaws.com:3306/UsersDB?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#  security:
+#    user:
+#      name: Venky
+#      password: pass@123
+server:
+  port: 8091
